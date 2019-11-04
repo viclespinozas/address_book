@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="card-body margin-top">
+        <h3>Remove Contact</h3>
+    </div>
+    <div class="card-body">
+        <form action="{{ path('remove_contact', {'contactId': contact.id}) }}" method="POST">
+            <div class="row">
+                <div class="col">
+                    <p>
+                        Are you sure that you want to remove the Contact?
+                    </p>
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col margin-top">
+                    <button type="submit" class="btn btn-success">Remove</button>
+                    <a href="{{ path('home') }}" class="btn btn-danger">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

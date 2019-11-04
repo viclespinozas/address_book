@@ -2,10 +2,10 @@
 
 {% block content %}
     <div class="card-body margin-top">
-        <h3>Create New Contact</h3>
+        <h3>Edit Contact</h3>
     </div>
     <div class="card-body">
-        <form action="{{ path('new_contact') }}" method="POST">
+        <form action="{{ path('edit_contact', {'contactId': contact.id}) }}" method="POST">
             <div class="row">
                 <div class="col">
                     {{ form_label(form.firstName) }}
@@ -56,7 +56,7 @@
             </div>
             <div class="row margin-top">
                 <div class="col margin-top">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                 </div>
             </div>
         </form>
