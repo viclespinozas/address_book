@@ -207,4 +207,9 @@ class AddressBook
 
         return $this;
     }
+
+    public function toString()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
 }
