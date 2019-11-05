@@ -56,5 +56,8 @@
             </div>
         </div>
     {% else %}
+    	<div class="card-body margin-top">
+            <h3>Hey there! you can start by adding <a href="{{ path('new_contact') }}">new contacts</a></h3>
+        </div>
     {% endif %}
 {% endblock %}
